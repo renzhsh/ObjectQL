@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{50C242E4-EA5B-48BD-9D0F-2AC796A1AE78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.Domain", "UnitTest\UnitTest.Domain\UnitTest.Domain.csproj", "{372CD8F8-62CF-4E61-ACBA-97349EFA5DF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectQL", "ObjectQL\ObjectQL.csproj", "{B42C2F0E-5FB8-42FC-A4E8-9752E52DA74C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectQL.DataTests", "UnitTest\ObjectQL.DataTests\ObjectQL.DataTests.csproj", "{D23843F6-2B5C-46F3-B58F-E927F7E6FB6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectQL.MySqlClient", "ObjectQL.MySqlClient\ObjectQL.MySqlClient.csproj", "{8262099E-0B27-47B9-8334-D6BD7F8BE590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectQL.OracleClient", "ObjectQL.OracleClient\ObjectQL.OracleClient.csproj", "{C564FE7B-9404-4312-A848-EB4B5568C9A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinhe.Common", "Tesla.Common\Jinhe.Common.csproj", "{E74805A6-CE7F-4B3E-BB60-4AEBBB22B1D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{372CD8F8-62CF-4E61-ACBA-97349EFA5DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{372CD8F8-62CF-4E61-ACBA-97349EFA5DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{372CD8F8-62CF-4E61-ACBA-97349EFA5DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{372CD8F8-62CF-4E61-ACBA-97349EFA5DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B42C2F0E-5FB8-42FC-A4E8-9752E52DA74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42C2F0E-5FB8-42FC-A4E8-9752E52DA74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42C2F0E-5FB8-42FC-A4E8-9752E52DA74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42C2F0E-5FB8-42FC-A4E8-9752E52DA74C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D23843F6-2B5C-46F3-B58F-E927F7E6FB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D23843F6-2B5C-46F3-B58F-E927F7E6FB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D23843F6-2B5C-46F3-B58F-E927F7E6FB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D23843F6-2B5C-46F3-B58F-E927F7E6FB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8262099E-0B27-47B9-8334-D6BD7F8BE590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8262099E-0B27-47B9-8334-D6BD7F8BE590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8262099E-0B27-47B9-8334-D6BD7F8BE590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8262099E-0B27-47B9-8334-D6BD7F8BE590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C564FE7B-9404-4312-A848-EB4B5568C9A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C564FE7B-9404-4312-A848-EB4B5568C9A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C564FE7B-9404-4312-A848-EB4B5568C9A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C564FE7B-9404-4312-A848-EB4B5568C9A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74805A6-CE7F-4B3E-BB60-4AEBBB22B1D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74805A6-CE7F-4B3E-BB60-4AEBBB22B1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74805A6-CE7F-4B3E-BB60-4AEBBB22B1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74805A6-CE7F-4B3E-BB60-4AEBBB22B1D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{372CD8F8-62CF-4E61-ACBA-97349EFA5DF2} = {50C242E4-EA5B-48BD-9D0F-2AC796A1AE78}
+		{D23843F6-2B5C-46F3-B58F-E927F7E6FB6B} = {50C242E4-EA5B-48BD-9D0F-2AC796A1AE78}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {171584FF-B68D-4B9F-831D-E5CF1251D4EE}
+	EndGlobalSection
+EndGlobal

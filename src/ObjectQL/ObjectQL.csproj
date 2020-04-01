@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B42C2F0E-5FB8-42FC-A4E8-9752E52DA74C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObjectQL</RootNamespace>
+    <AssemblyName>ObjectQL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Consts.cs" />
+    <Compile Include="Common\Logger.cs" />
+    <Compile Include="Data\Driver\Access\AccessCommandBuildProvider.cs" />
+    <Compile Include="Data\Driver\Access\AccessDataAccess.cs" />
+    <Compile Include="Data\ConnectionSetting.cs" />
+    <Compile Include="Data\ConnOwnerShip.cs" />
+    <Compile Include="Data\DataCommandOperateType.cs" />
+    <Compile Include="Data\DataParameterCollection.cs" />
+    <Compile Include="Data\DataReader.cs" />
+    <Compile Include="Data\DataSetResult.cs" />
+    <Compile Include="Data\DataTableResult.cs" />
+    <Compile Include="Data\DbProvider.cs" />
+    <Compile Include="Data\DbTools.cs" />
+    <Compile Include="Data\Driver\Access\AccessDriverProvider.cs" />
+    <Compile Include="Data\Driver\BaseMigrateProvider.cs" />
+    <Compile Include="Data\Driver\IMigrateProvider.cs" />
+    <Compile Include="Data\Driver\SqlServer\SqlServerDriverProvider.cs" />
+    <Compile Include="Data\ICommandBuildProvider.cs" />
+    <Compile Include="Data\IDataAccess.cs" />
+    <Compile Include="Data\IDataCommandBuilder.cs" />
+    <Compile Include="Data\Driver\CommandBuildProvider.cs" />
+    <Compile Include="Data\Driver\DataAccess.cs" />
+    <Compile Include="Data\DataCommand.cs" />
+    <Compile Include="Data\Driver\IObjectQLDriverProvider.cs" />
+    <Compile Include="Data\IResultReader.cs" />
+    <Compile Include="Data\NonQueryResult.cs" />
+    <Compile Include="Data\ResultBase.cs" />
+    <Compile Include="Data\ResultDescription.cs" />
+    <Compile Include="Data\ScalerResult.cs" />
+    <Compile Include="Data\Driver\SqlServer\SqlServerCommandBuildProvider.cs" />
+    <Compile Include="Data\Driver\SqlServer\SqlServerDataAccess.cs" />
+    <Compile Include="Linq\Query\SqlClauseBuilder.cs" />
+    <Compile Include="Linq\Query\unuse\BinaryExpressionSqlWhereResult.cs" />
+    <Compile Include="Linq\Delete\DeleteExtensions.cs" />
+    <Compile Include="Linq\Insert\InsertExtensions.cs" />
+    <Compile Include="Linq\Query\QueryExtensions.cs" />
+    <Compile Include="Sequence\Increase.cs" />
+    <Compile Include="Sequence\Luhm.cs" />
+    <Compile Include="Sequence\Sequence.cs" />
+    <Compile Include="Sequence\Snowflake.cs" />
+    <Compile Include="Linq\StoredProcedure\IStoredProcedureExcutor.cs" />
+    <Compile Include="Linq\StoredProcedure\StoredProcedureExtensions.cs" />
+    <Compile Include="Linq\Update\UpdateExtensions.cs" />
+    <Compile Include="Model\InnerRegister.cs" />
+    <Compile Include="ORM\CodeFirst\CodeFirstRegister.cs" />
+    <Compile Include="ORM\CodeFirst\Diff\DbChange.cs" />
+    <Compile Include="ORM\CodeFirst\Diff\DbColumnChange.cs" />
+    <Compile Include="ORM\CodeFirst\Diff\DiffProvider.cs" />
+    <Compile Include="ORM\CodeFirst\Info\DbColumnObject.cs" />
+    <Compile Include="ORM\CodeFirst\Info\DbConstraintObject.cs" />
+    <Compile Include="ORM\CodeFirst\DbRelationProvider.cs" />
+    <Compile Include="ORM\CodeFirst\Info\DbSchemaInfo.cs" />
+    <Compile Include="ORM\CodeFirst\MigrateEngine.cs" />
+    <Compile Include="ORM\CodeFirst\Policy\BaseMigratePolicy.cs" />
+    <Compile Include="ORM\CodeFirst\Policy\IMigratePolicy.cs" />
+    <Compile Include="ORM\CodeFirst\Policy\InitializeMigratePolicy.cs" />
+    <Compile Include="ORM\CodeFirst\Policy\ModifyMigratePolicy.cs" />
+    <Compile Include="ORM\CodeFirst\Policy\UpgradeMigratePolicy.cs" />
+    <Compile Include="ORM\ConfigSection\ObjectQLConfigSection.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ObjectQLConfigSection.csd</DependentUpon>
+    </Compile>
+    <Compile Include="ORM\DataAnnotation\ColumnAttribute.cs" />
+    <Compile Include="ORM\DataAnnotation\ConstraintAttribute.cs" />
+    <Compile Include="ORM\DataAnnotation\NotMappedAttribute.cs" />
+    <Compile Include="ORM\DataAnnotation\TableAttribute.cs" />
+    <Compile Include="ORM\IObjectRegister.cs" />
+    <Compile Include="ORM\ObjectQLEngine.cs" />
+    <Compile Include="ORM\OrmProvider\DataDriverProvider.cs" />
+    <Compile Include="ORM\OrmProvider\DataOrmProvider.cs" />
+    <Compile Include="Linq\Query\FieldRelation.cs" />
+    <Compile Include="Linq\Query\Interface\IGroupingQuery.cs" />
+    <Compile Include="Linq\Query\Interface\IOrderQuery.cs" />
+    <Compile Include="Linq\Query\Interface\IPageable.cs" />
+    <Compile Include="Linq\Query\Interface\IPageSqlContext.cs" />
+    <Compile Include="Linq\StoredProcedure\IStoredProcedureContext.cs" />
+    <Compile Include="Linq\Query\Interface\IQueryExecutor.cs" />
+    <Compile Include="Linq\Query\Interface\IQueryFilter.cs" />
+    <Compile Include="Linq\Query\Interface\IResultSet.cs" />
+    <Compile Include="Linq\Query\Interface\ISelectFilter.cs" />
+    <Compile Include="Linq\Query\Interface\ISqlContext.cs" />
+    <Compile Include="Linq\Query\unuse\LinqRuntimeTypeBuilder.cs" />
+    <Compile Include="Linq\Query\ResultSet.cs" />
+    <Compile Include="Linq\Query\SqlContext.cs" />
+    <Compile Include="Linq\Query\SelectField.cs" />
+    <Compile Include="Linq\Query\unuse\SqlCollectors.cs" />
+    <Compile Include="Linq\Query\SqlEntityClauseBuilder.cs" />
+    <Compile Include="Linq\Query\Interface\IModelReaderProvider.cs" />
+    <Compile Include="Linq\Query\ModelReaderProvider.cs" />
+    <Compile Include="Linq\Query\SqlBuilderContext.cs" />
+    <Compile Include="Linq\Query\SqlDataQueryable.cs" />
+    <Compile Include="ORM\OrmProvider\Info\DbColumnInfo.cs" />
+    <Compile Include="ORM\DatabaseFirst\EntityMap.cs" />
+    <Compile Include="ORM\DatabaseFirst\EntityMapRegister.cs" />
+    <Compile Include="ORM\DatabaseFirst\EntityPropertyMap.cs" />
+    <Compile Include="Linq\DataGateway.cs" />
+    <Compile Include="ORM\CodeFirst\Info\DbTableObject.cs" />
+    <Compile Include="ORM\OrmProvider\Info\EntityInfo.cs" />
+    <Compile Include="ORM\DatabaseFirst\EntityMapContainer.cs" />
+    <Compile Include="ORM\OrmProvider\Info\EntityPropertyInfo.cs" />
+    <Compile Include="ORM\DatabaseFirst\IEntityMap.cs" />
+    <Compile Include="Linq\Query\Interface\IDataQueryable.cs" />
+    <Compile Include="Linq\Query\Interface\IWhereClauseBuilder.cs" />
+    <Compile Include="Linq\Query\unuse\SqlExpression.cs" />
+    <Compile Include="Linq\Query\SqlJoinRelevance.cs" />
+    <Compile Include="Linq\Update\UpdateObject.cs" />
+    <Compile Include="Linq\Update\UpdateCriteria.cs" />
+    <Compile Include="Linq\Query\WhereClauseBuilder.cs" />
+    <Compile Include="Linq\Query\WhereClauseBuildResult.cs" />
+    <Compile Include="Common\DynamicObject.cs" />
+    <Compile Include="Common\Exceptions\NotSetPrimaryKeyException.cs" />
+    <Compile Include="Linq\Query\Interface\IAggregateQuery.cs" />
+    <Compile Include="Linq\StoredProcedure\StoredProcedureContext.cs" />
+    <Compile Include="ORM\OrmProvider\Info\DbTableInfo.cs" />
+    <Compile Include="ORM\OrmProvider\OrmContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Linq\Specifications\ExpressionFuncExtender.cs" />
+    <Compile Include="Linq\Specifications\Impl\AndNotSpecification.cs" />
+    <Compile Include="Linq\Specifications\Impl\AnySpecification.cs" />
+    <Compile Include="Linq\Specifications\Impl\ExpressionSpecification.cs" />
+    <Compile Include="Linq\Specifications\ICompositeSpecification.cs" />
+    <Compile Include="Linq\Specifications\Impl\AndSpecification.cs" />
+    <Compile Include="Linq\Specifications\Impl\CompositeSpecification.cs" />
+    <Compile Include="Linq\Specifications\Impl\NotSpecification.cs" />
+    <Compile Include="Linq\Specifications\Impl\OrNotSpecification.cs" />
+    <Compile Include="Linq\Specifications\Impl\OrSpecification.cs" />
+    <Compile Include="Linq\Specifications\ISpecification.cs" />
+    <Compile Include="Linq\Specifications\Impl\Specification.cs" />
+    <Compile Include="Linq\Specifications\ParameterRebinder.cs" />
+    <Compile Include="Common\TypeExt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ORM\ConfigSection\ObjectQLConfigSection.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>ObjectQLConfigSection.csd.cs</LastGenOutput>
+    </None>
+    <None Include="ORM\ConfigSection\ObjectQLConfigSection.csd.config">
+      <DependentUpon>ObjectQLConfigSection.csd</DependentUpon>
+    </None>
+    <None Include="ORM\ConfigSection\ObjectQLConfigSection.csd.diagram">
+      <DependentUpon>ObjectQLConfigSection.csd</DependentUpon>
+    </None>
+    <None Include="ORM\ConfigSection\ObjectQLConfigSection.csd.xsd">
+      <DependentUpon>ObjectQLConfigSection.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="transform\App.config.uninstall.xdt">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="transform\App.config.install.xdt">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="transform\Web.config.install.xdt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="transform\Web.config.uninstall.xdt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tesla.Common\Jinhe.Common.csproj">
+      <Project>{e74805a6-ce7f-4b3e-bb60-4aebbb22b1d0}</Project>
+      <Name>Jinhe.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <objectQL>
+    <drivers>
+      <add name="Oracle" xdt:Transform="Remove" xdt:Locator="Match(name)"></add>
+    </drivers>
+  </objectQL>
+
+  <objectQL>
+    <drivers xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+  </objectQL>
+</configuration>

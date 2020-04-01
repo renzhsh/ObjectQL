@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+
+  <!-- remove existing entry -->
+  <configSections>
+    <section name="objectQL" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+  </configSections>
+
+  <!-- remove if section is empty -->
+  <configSections xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+
+  <objectQL xdt:Transform="RemoveAll"/>
+
+</configuration>

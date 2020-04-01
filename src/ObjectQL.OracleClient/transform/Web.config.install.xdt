@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+
+  <objectQL xdt:Transform="InsertIfMissing">
+  </objectQL>
+
+  <objectQL>
+    <drivers xdt:Transform="InsertIfMissing">
+    </drivers>
+  </objectQL>
+
+  <objectQL>
+    <drivers>
+      <add name="Oracle" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)"  provider="ObjectQL.Data.OracleDirverProvider, ObjectQL.OracleClient" />
+    </drivers>
+  </objectQL>
+</configuration>
